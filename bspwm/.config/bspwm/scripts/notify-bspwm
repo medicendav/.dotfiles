@@ -1,0 +1,3 @@
+#! /bin/bash
+
+bspc wm -r | notify-send 'Recargada la configuracion de bspwm'

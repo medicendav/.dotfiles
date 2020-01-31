@@ -1,0 +1,28 @@
+sw_volume: 44
+audio_device_state:1:HD-Audio Generic
+state: stop
+current: 0
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:10 - Constelación Alpha DCI.mp3
+1:Coldplay - The Scientist.mp3
+2:Rossy Armenta/Duetos Edgar Oceransky Rodrigo Rojas Diego Ojeda Marwan Otros/Jopasaye - El Depto En El Fondo Edel Juarez Y Rodrigo Rojas.mp3
+3:Rossy Armenta/Duetos Edgar Oceransky Rodrigo Rojas Diego Ojeda Marwan Otros/Jopasaye - En El Fondo Rodrigo Rojas Y Edgar Oceransky.mp3
+4:Rossy Armenta/Duetos Edgar Oceransky Rodrigo Rojas Diego Ojeda Marwan Otros/Marta Espinosa - Futuro Imperfecto L Marta Espinosa Ft Edgar Oceransky.mp3
+5:Rossy Armenta/Duetos Edgar Oceransky Rodrigo Rojas Diego Ojeda Marwan Otros/Marwan - Animales.mp3
+6:Rossy Armenta/Duetos Edgar Oceransky Rodrigo Rojas Diego Ojeda Marwan Otros/Rodrigo Rojas - En Mi Rodrigo Rojas Y Edgar Oceransky.mp3
+7:Rossy Armenta/Duetos Edgar Oceransky Rodrigo Rojas Diego Ojeda Marwan Otros/Aldo Garcia Avila - 01 Aprendo A Esperar Que Habra Sido De Ti Con Edgar Oceransky.mp3
+8:06 - Pasen y beban.mp3
+9:Drozeer/Muse,705/Black Holes and Revelations/339063.mp3
+10:Drozeer/Muse - Simulation Theory (Super Deluxe)/01 - Algorithm.mp3
+11:Drozeer/Muse - Simulation Theory (Super Deluxe)/02 - The Dark Side.mp3
+12:Drozeer/Muse - Simulation Theory (Super Deluxe)/11 - The Void.mp3
+13:Drozeer/Muse - Simulation Theory (Super Deluxe)/21 - The Dark Side (Alternate Reality Version) [Instrumental] (Alternate Reality Version; Instrumental).mp3
+14:Drozeer/Muse - Simulation Theory (Super Deluxe)/05 - Break It to Me.mp3
+playlist_end

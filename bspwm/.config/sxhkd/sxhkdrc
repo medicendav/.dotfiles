@@ -1,0 +1,164 @@
+
+				##########################################################################
+				#      ___           ___           ___           ___          _____	 #
+				#     /  /\         /__/|         /__/\         /__/|        /  /::\ 	 #
+				#    /  /:/_       |  |:|         \  \:\       |  |:|       /  /:/\:\ 	 #
+				#   /  /:/ /\      |  |:|          \__\:\      |  |:|      /  /:/  \:\   #
+				#  /  /:/ /::\   __|__|:|      ___ /  /::\   __|  |:|     /__/:/ \__\:|  #
+				# /__/:/ /:/\:\ /__/::::\____ /__/\  /:/\:\ /__/\_|:|____ \  \:\ /  /:/  #
+				# \  \:\/:/~/:/    ~\~~\::::/ \  \:\/:/__\/ \  \:\/:::::/  \  \:\  /:/   #
+				#  \  \::/ /:/      |~~|:|~~   \  \::/       \  \::/~~~~    \  \:\/:/    #
+				#   \__\/ /:/       |  |:|      \  \:\        \  \:\         \  \::/     #
+				#     /__/:/        |  |:|       \  \:\        \  \:\         \__\/      #
+				#     \__\/         |__|/         \__\/         \__\/			 #
+				##########################################################################
+
+
+
+
+						######################################################
+						############    Atajo de teclas sxhkd  ###############
+						######################################################
+
+
+######################################################
+# #Atajos a los archivos de config de bspwm y sxhkd ##
+######################################################
+
+#Abrir archivo de config bspwmrc
+super + alt + b
+	gedit ~/.config/bspwm/bspwmrc
+
+#Abrir archivo de config sxhkdrc
+super + shift + b
+	gedit ~/.config/sxhkd/sxhkdrc	
+
+#Recargar config de sxhkd
+super + shift + r
+    	pkill -USR1 -x sxhkd && notify-send 'Recargada la configuracion de sxhkd'
+
+#Recargar config de bspwm
+super + alt + r
+	bspc wm -r | notify-send 'Recargada la configuracion de bspwm'
+
+#########################################################
+######	     #Aplicaciones más usdas     ################
+#########################################################
+
+#Navegador
+super + w
+        firefox
+
+#Terminal
+super + Return
+        urxvt
+#Terminal
+super + Return
+        tilix
+
+#Editor de texto
+ctrl + g
+	gedit
+
+#Administrador de archivos
+super + f
+        thunar
+
+#Administrador de archivos como root
+super + alt + f
+        tilix -e sudo pcmanfm
+
+#Configuración del volumen
+super + v
+	pavucontrol
+
+#Abrir Network-Manager
+super + n
+	nm-connection-editor
+
+#Menu de aplicaciones Rofi
+super + shift + Return
+	rofi -modi window,drun -sidebar-mode -show-icons -show drun
+
+#Reproductor de música por consola
+super + @space
+	/usr/bin/ncmpcpp
+	
+###############################################################
+###########	 Configuracion de las ventanas   ##############
+###############################################################
+
+#Cerrar ventanas
+super + q
+	bspc node -c
+
+#Ventana fullscreen
+super + shift + m
+	bspc desktop -l next
+
+#Estado de la ventana
+super + {i,o,p}
+    	bspc node -t {tiled,floating,fullscreen}
+
+# Cambiar posicion de la ventana
+super + shift + {Left,Down,Up,Right}
+    	bspc node -s {west,south,north,east}
+
+#Moverse entre Workspaces
+super + {Left,Right}
+    	bspc desktop -f {prev,next}.local
+
+#Cambiar al ultimo WorkSpaces
+super + Tab
+    	bspc desktop -f last
+
+#Enviar ventanas a diferentes WorkSpaces
+super + {_,shift + }{1-9,0}
+    bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+###############################################################
+########   Mover y cambiar de tamaño Ventanas   ###############
+###############################################################
+
+#Expandir ventanas desde la derecha
+super + alt + {Left,Down,Up,Right}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+#Expandir ventanas desde la izquierda
+super + alt + shift + {Left,Down,Up,Right}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+#Mover ventanas flotantes
+ctrl + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+#################################################################
+#############		Teclas multimedia	#################
+#################################################################
+
+#Subir Volumen
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+
+#Bajar volumen
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+#Subir brillo
+XF86MonBrightnessUp
+	~/.config/bspwm/scripts/brillo-up.sh
+
+#Bajar brillo
+XF86MonBrightnessDown
+	~/.config/bspwm/scripts/brillo-down.sh
+
+#Captura de pantalla
+Print
+	scrot 'wall_%Y-%m-%d-%H:%M.png'
+
